@@ -13,3 +13,12 @@ greater than the random number
 letters at every wrong guess
 -When the user guesses correctly inform them and show them their guess
 history using a for loop """
+
+import random
+
+number = random.randint(1, 10)
+print(number)
+while number is not input("Input a number"):
+    print("Incorrect")
+else:
+    print("Correct")
