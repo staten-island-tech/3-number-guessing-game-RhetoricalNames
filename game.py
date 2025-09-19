@@ -16,9 +16,15 @@ history using a for loop """
 
 import random
 
+
 number = random.randint(1, 10)
 print(number)
-while number is not input("Input a number"):
-    print("Incorrect")
-else:
-    print("Correct")
+
+guess = 0
+while not number == guess:
+    guess = input("Guess a number")
+    int(guess) == guess
+    if not number == guess:
+        print("Incorrect")
+    else:
+        print("Correct")
