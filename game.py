@@ -15,16 +15,20 @@ letters at every wrong guess
 history using a for loop """
 
 import random
-
-
-number = random.randint(1, 10)
-print(number)
+number = random.randint(1, 1000)
 
 guess = 0
+guess_history = [ ]
 while not number == guess:
     guess = input("Guess a number")
-    int(guess) == guess
-    if not number == guess:
-        print("Incorrect")
+    guess = int(guess)
+    if number == guess:
+        print(f"Correct. Your guess history is {guess_history}. You guessed {len(guess_history)} times.")
+        quit()
     else:
-        print("Correct")
+        if guess < number:
+            guess_history.append(guess)
+            print(f"Incorrect, greater than {guess}. Numbers guessed are {guess_history}")
+        else:
+            guess_history.append(guess)
+            print(f"Incorrect, less than {guess}. Numbers guessed are {guess_history}")
