@@ -15,7 +15,7 @@ letters at every wrong guess
 history using a for loop """
 
 import random
-number = random.randint(1, 1000)
+number = random.randint(1, 10000)
 
 guess = 0
 guess_history = [ ]
